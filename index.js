@@ -1,27 +1,29 @@
 const express = require('express')
 const app = express()
 
-//GET / HTTP/1.1
-app.get('/', (request, response) => {
-    response.send('Home Page GET')
-})
-
-// POST / HTTP/1.1
-app.post('/', (request, response) => {
-    response.send('Home Page Second Route')
-})
-
-// GET /products/nike-large-white-shoe HTTP/1.1
-app.get('/products/:productName', (request, response) => {
-    response.send('Product Page, Product Name: ' + request.params.productName)
-})
-
-// GET /products/683-nike-large-white-shoe HTTP/1.1
-app.get('/products/:productId-:productName', (request, response) => {
+//GET /products/all?page=2&sort=price&order=desc HTTP/1.1
+app.get('/products/all',(request, response) => {
     response.send(
-        'Product Page, Product Name: ' + request.params.productName +
-        'Product ID: ' + request.params.productId
+       'Products,' + request.query.page + ',' + request.query.sort + ',' + request.query.order
+    )
+})
+
+//GET /products/8719-small/red HTTP/1.1
+app.get('/products/:productId-:size-:color',(request, response) => {
+    response.send(
+        'Product,' + request.params.productId +
+        ',' + request.params.size +
+        ',' + request.params.color
+    )
+})
+
+//GET /products/8719 HTTP/1.1
+app.get('/products/:productId',(request, response) => {
+    response.send(
+        'Product, ' + request.params.productId
         )
 })
+
+
 
 app.listen(3000)
