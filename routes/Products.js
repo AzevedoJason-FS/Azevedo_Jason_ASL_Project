@@ -12,5 +12,4 @@ router.delete('/:id', productCtrl.remove)
 router.post('/:id/delete', productCtrl.remove)
 
 
-
 module.exports = router
