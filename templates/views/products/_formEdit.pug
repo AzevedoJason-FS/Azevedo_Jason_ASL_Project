@@ -1,0 +1,7 @@
+form(action='/products/'+product.id, method="POST")
+    input( type="hidden" name="id" value=product.id)
+    label( for="name" ) Name: 
+    input( type="text" name="name" id="name" value=product.name) 
+    input( type="submit" name="submit" id="submit" )
+
+    
