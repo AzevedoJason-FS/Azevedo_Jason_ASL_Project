@@ -2,9 +2,7 @@ const Products = require('../models/Products')
 
 const index = (req, res) => {
     const products = Products.all()
-    res.render('products/index', { products })
-
-    
+    res.render('products/index', { products })   
 }
 
 const form = (req, res) => {
@@ -33,7 +31,7 @@ const update = (req, res) => {
 
 const remove = (req, res) => {
     const product = Products.remove(req.params.id)
-    res.json(product)
+    res.redirect('/products')
 }
 
 module.exports = { index,form,show,create,update,remove }
