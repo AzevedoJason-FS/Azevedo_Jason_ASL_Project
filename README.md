@@ -9,15 +9,14 @@
 📪 &nbsp; JCAzevedo@student.fullsail.edu
 
 
-### Branch 1
+### Restful Branch
 
-For this milestone you will have created a wireframe prototype in Figma. 
-https://www.figma.com/file/7S6X5qko3bCL555DKUkEQD/Main-Portfolio-Project?node-id=0%3A1
+cURL Endpoint Basic Testing
 
-### Branch 2
+### 1.2-Advanced-Routing Branch
 
-This week in REACT has been very smooth-sailing. I very much enjoyed creating the pages and the routes to each one. The biggest challenge was setting up a server so we can connect to a MongoDB Database. I would say I 'leveled up' by setting up the server side of this app. Next I have a feeling that the challenges will come when I try C.R.U.D stuff into and f
+Demonstrate all of the RESTful Endpoints using cURL (index, show, update, create, delete)
 
-### Branch 3
+### Template-Engine Branch
 
-This week in REACT has been very smooth-sailing. I very much enjoyed creating the pages and the routes to each one. The biggest challenge was setting up a server so we can connect to a MongoDB Database. I would say I 'leveled up' by setting up the server side of this app. Next I have a feeling that the challenges will come when I try C.R.U.D stuff into and f
+Structure Design Templates with PUG (https://pugjs.org/api/getting-started.html) Template-Engine
