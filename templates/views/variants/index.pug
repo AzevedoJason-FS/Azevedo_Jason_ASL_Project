@@ -1,0 +1,11 @@
+extends ../../layout/base
+
+block content 
+    h1 All Variants:
+    ul 
+        each variant in variants
+            li= variant.title + '|$' + variant.price        
+            a(href='variants/'+variant.id) Edit 
+            a(href='variants/'+variant.id+'/delete') Delete
+    br
+    a(href='variants/new') Create Variant

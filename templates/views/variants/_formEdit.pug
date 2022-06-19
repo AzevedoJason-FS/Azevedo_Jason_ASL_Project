@@ -1,0 +1,11 @@
+form(action='/variants/'+variant.id, method="POST")
+    input( type="hidden" name="id" value=variant.id)
+    label( for="title" ) Title: 
+    input( type="text" name="title" id="title" value=variant.title) 
+    br
+    label( for="price" ) Price: 
+    input( type="number" name="price" id="price" value=variant.price min="0" step=".01") 
+    br
+    input( type="submit" name="submit" id="submit" )
+
+    

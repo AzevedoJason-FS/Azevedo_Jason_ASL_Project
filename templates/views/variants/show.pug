@@ -1,0 +1,14 @@
+extends ../../layout/base
+
+block content 
+    h1 About #{variant.title}
+     ul 
+        li 
+            label ID: #{variant.id}
+            br
+            label Title: #{variant.title}
+            br
+            label Price: #{variant.price}
+            br
+            a(href=variant.id+'/edit') Edit
+            a(href=variant.id+'/delete') Delete 
