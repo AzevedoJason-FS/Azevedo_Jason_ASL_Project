@@ -1,14 +1,14 @@
 extends ../../layout/base
 
 block content 
-    h1 About #{variant.title}
+    h1 About #{variants.title}
      ul 
         li 
-            label ID: #{variant.id}
+            label ID: #{variants.id}
             br
-            label Title: #{variant.title}
+            label Title: #{variants.title}
             br
-            label Price: #{variant.price}
+            label Price: #{variants.price}
             br
-            a(href=variant.id+'/edit') Edit
-            a(href=variant.id+'/delete') Delete 
+            a(href=variants.id+'/edit') Edit
+            a(href=variants.id+'/delete') Delete 
