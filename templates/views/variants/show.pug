@@ -12,5 +12,9 @@ block content
             br
             label Product: #{product.title}
             br
+            label Inventory: #{variants.inventory}
+            br
+            label Description: #{variants.description}
+            br
             a(href=variants.id+'/edit') Edit
             a(href=variants.id+'/delete') Delete 
