@@ -5,6 +5,11 @@ form(action='/variants', method="POST")
     label( for="name" ) Price: 
     input( type="number" name="price" id="price" min="0" step=".01" ) 
     br
+    label( for="products" ) Products:
+    select( name="productId" ) 
+        for product in products
+            option( value=product.id ) #{ product.title }
+    br
     input( type="submit" name="submit" id="submit" )
 
     

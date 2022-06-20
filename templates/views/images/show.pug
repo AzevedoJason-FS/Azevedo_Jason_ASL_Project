@@ -1,14 +1,12 @@
 extends ../../layout/base
 
 block content 
-    h1 About #{product.title}
+    h1 About Image ##{image.id}
      ul 
         li 
-            label ID: #{product.id}
+            label ID: #{image.id}
             br
-            label Name: #{product.title}
+            label Assigned Variant: #{variant.title}
             br
-            label Price: #{product.price}
-            br
-            a(href=product.id+'/edit') Edit
-            a(href=product.id+'/delete') Delete 
+            a(href=image.id+'/edit') Edit
+            a(href=image.id+'/delete') Delete 

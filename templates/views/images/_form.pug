@@ -1,9 +1,8 @@
-form(action='/products', method="POST")
-    label( for="name" ) Name: 
-    input( type="text" name="title" id="title" ) 
-    br
-    label( for="name" ) Price: 
-    input( type="number" name="price" id="price" min="0" step=".01" ) 
+form(action='/images', method="POST")
+    label( for="variant" ) Variant: 
+    select( name='variantId' ) 
+        for variant in variants
+            option( value=variant.id ) #{ variant.title }
     br
     input( type="submit" name="submit" id="submit" )
 
