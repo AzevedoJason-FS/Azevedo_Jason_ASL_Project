@@ -4,7 +4,7 @@ block content
     h1 All Products:
     ul 
         each product in products
-            li= product.title + '|$' + product.price        
+            li= product.title + '| Price: $' + product.price + '| Published: ' +product.is_published 
             a(href='products/'+product.id) Edit 
             a(href='products/'+product.id+'/delete') Delete
     br

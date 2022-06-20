@@ -9,6 +9,11 @@ form(action='/products/'+product.id, method="POST")
     label( for="description" ) Description: 
     input( type="text" name="description" id="description" ) 
     br
+    label( for="published" ) Is_Published: 
+    select( name='variantId' ) 
+        option( value='1') Active
+        option( value='0') Inactive
+    br
     input( type="submit" name="submit" id="submit" )
 
     

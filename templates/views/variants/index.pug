@@ -4,7 +4,7 @@ block content
     h1 All Variants:
     ul 
         each variant in variants
-            li= variant.title + '|Price: $' + variant.price + '|Inventory:' + variant.inventory       
+            li= variant.title + '| Price: $' + variant.price + '| Inventory: ' + variant.inventory       
             a(href='variants/'+variant.id) Edit 
             a(href='variants/'+variant.id+'/delete') Delete
     br
