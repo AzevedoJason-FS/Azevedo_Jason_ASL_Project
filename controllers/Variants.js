@@ -16,9 +16,9 @@ const form = async (req, res) => {
 }
 
 const show = async (req, res) => {
-    const variants = await Variant.findByPk(req.params.id)
-    const product = await variants.getProduct()
-    res.render('variants/show', { variants, product })
+    const variant = await Variant.findByPk(req.params.id)
+    const product = await variant.getProduct()
+    res.render('variants/show', { variant, product })
 }
 
 const create = async (req, res) => {

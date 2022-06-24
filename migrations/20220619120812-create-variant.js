@@ -14,6 +14,11 @@ module.exports = {
       price: {
         type: Sequelize.FLOAT
       },
+      slug: {
+        type: Sequelize.STRING,
+        defaultValue: 'none',
+        allowNull: false
+      },
       productId: {
         type: Sequelize.INTEGER,
         allowNull: true

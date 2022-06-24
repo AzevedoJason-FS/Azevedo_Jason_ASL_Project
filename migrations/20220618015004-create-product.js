@@ -14,6 +14,14 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
+      slug: {
+        type: Sequelize.STRING,
+        defaultValue: 'none',
+        allowNull: false
+      },
+      description: {
+        type: Sequelize.TEXT('long')
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

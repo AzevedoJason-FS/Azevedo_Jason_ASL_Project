@@ -7,6 +7,8 @@ services:
       - asl
     environment:
       MARIADB_ROOT_PASSWORD: root
+    stdin_open: true
+    tty: true
   node:
     image: "node:16"
     user: "node"
