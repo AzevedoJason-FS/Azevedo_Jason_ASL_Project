@@ -7,12 +7,13 @@ form(action='/products/'+product.id, method="POST")
     input( type="number" name="price" id="price" value=product.price min="0" step=".01") 
     br
     label( for="description" ) Description: 
-    input( type="text" name="description" id="description" ) 
+    input( type="text" name="description" id="description" value=product.description) 
     br
     label( for="published" ) Is_Published: 
-    select( name='variantId' ) 
-        option( value='1') Active
-        option( value='0') Inactive
+    input( type="checkbox" name="is_published" id="is_published" value="true" checked="checked")
+    br
+    label( for="slug" ) Slug:
+    input( type="text" name="slug" id="slug" value=product.slug)
     br
     input( type="submit" name="submit" id="submit" )
 
