@@ -1,0 +1,10 @@
+extends ../../layout/base
+
+block content 
+    h1 All Products:
+         for product in products
+           
+            for variant in product.Variants
+               for image in variant.Images
+                  img( src="/public/images/"+ image.id+image.extension )
+                  a( href="/main/products/"+product.slug ) Link
