@@ -184,17 +184,43 @@ img{
 }
 
 .product-variant{
-    text-decoration: none;
+    text-decoration: underline;
     color: rgb(0, 0, 0);
 }
 
 .product-variant-selected{
     text-decoration: none;
-    color: #AAAFB4;
+    color: #dadada;
 }
 
 .sold-out{
-    color: red;
+    color: rgb(250, 202, 91);
+}
+
+.product-cards{
+    width: 75%;
+    margin: 6rem auto;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.product-card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-slug{
+    color: black;
+}
+
+.product-price{
+    color: #4D96FF;
+    text-decoration: none;
 }
 
 /* Media Queries */
