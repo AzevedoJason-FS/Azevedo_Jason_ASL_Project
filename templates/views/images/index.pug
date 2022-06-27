@@ -1,11 +1,21 @@
 extends ../../layout/base
 
 block content 
+  .barHigh
+  .barHigh2
+  .barHigh3
+  .barHigh4
+  .barHigh5
+  .contentProducts
+  
     h1 All Images:
     ul 
         each image in images
-            li= image.id     
-            a(href='images/'+image.id) Edit 
+            h2 ID: #{image.id}
+            img( class="pic-"+image.id src="/public/images/"+image.id+image.extension)
+            br
+            a(href='images/'+image.id) Edit
+            br 
             a(href='images/'+image.id+'/delete') Delete
     br
     a(href='images/new') Create New Image

@@ -1,11 +1,13 @@
-form(action='/products/'+product.id, method="POST")
-    input( type="hidden" name="id" value=product.id)
-    label( for="title" ) Name: 
-    input( type="text" name="title" id="title" value=product.title) 
+form(action='/images' enctype="multipart/form-data" method="POST")
+    input( type="hidden" name="id" value=image.id)
+    label( for="variant" ) Variant: 
+    select( name='variantId' ) 
+        for variant in variants
+            option( value=variant.id ) #{ variant.title }
     br
-    label( for="price" ) Price: 
-    input( type="number" name="price" id="price" value=product.price min="0" step=".01") 
+    label( for="image") Upload Image:
     br
+    input( type="file" name="image" id="image" )
     input( type="submit" name="submit" id="submit" )
 
     

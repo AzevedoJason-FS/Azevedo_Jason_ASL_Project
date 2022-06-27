@@ -1,0 +1,27 @@
+extends ../../layout/base
+
+block content 
+ .card
+  .card-img
+    h1.product-title #{product.title} - #{variant.title}
+    for image in variant.Images
+        img.showImg(src="/public/images/"+image.id+image.extension)
+  .card-details
+        h1.price $#{variant.price}
+        br
+        label.product-description #{variant.description}
+        br
+        h3 Options
+            p 
+                for option in product.Variants
+                    if option.id == variant.id
+                        p.product-variant-selected -#{option.title}
+                    else
+                        a.product-variant( href="/main/products/"+product.slug+"?variant="+option.slug) -#{option.title}
+        h3 Stock:
+                if variant.inventory == 0
+                    p.sold-out Sold Out
+                else if variant.inventory < 10
+                    p.sold-out Less than 10 Remaining 
+                else
+                    p In Stock

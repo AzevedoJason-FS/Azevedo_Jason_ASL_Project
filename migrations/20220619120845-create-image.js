@@ -17,6 +17,7 @@ module.exports = {
       },
       extension: {
         allowNull: false,
+        defaultValue: 'jpg',
         type: Sequelize.STRING
       },
       updatedAt: {

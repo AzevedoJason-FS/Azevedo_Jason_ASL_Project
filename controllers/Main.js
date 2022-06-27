@@ -17,12 +17,10 @@ const show = async (req, res) => {
 		]
 	})
 
-	// Variant defaults to first variant in product
 	let variant = product.Variants[0]
 
-	// If ?v= is set in the URL then set the variant
-	if (req.query.v) {
-		variant = product.Variants.find(v => v.slug === req.query.v)
+	if (req.query.variant) {
+		variant = product.Variants.find(variant => variant.slug === req.query.variant)
 	}
 
 	res.render('main/show', { product, variant })

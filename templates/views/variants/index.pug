@@ -1,11 +1,22 @@
 extends ../../layout/base
 
-block content 
+block content
+  .barHigh
+  .barHigh2
+  .barHigh3
+  .barHigh4
+  .barHigh5
+  .contentProducts
     h1 All Variants:
     ul 
         each variant in variants
-            li= variant.title + '| Price: $' + variant.price + '| Inventory: ' + variant.inventory       
+            h2 Title: #{variant.title}
+            p Price: $#{variant.price}
+            p Inventory: #{variant.inventory}
             a(href='variants/'+variant.id) Edit 
+            br
             a(href='variants/'+variant.id+'/delete') Delete
     br
     a(href='variants/new') Create Variant
+
+

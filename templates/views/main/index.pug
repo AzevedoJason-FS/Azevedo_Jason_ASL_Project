@@ -1,10 +1,14 @@
 extends ../../layout/base
 
 block content 
-    h1 All Products:
-         for product in products
-           
-            for variant in product.Variants
-               for image in variant.Images
-                  img( src="/public/images/"+ image.id+image.extension )
-                  a( href="/main/products/"+product.slug ) Link
+   .barHigh
+   .barHigh2
+   .barHigh3
+   .barHigh4
+   .barHigh5
+   for product in products
+      h1 #{product.title}
+      a(href="/main/products/"+product.slug)
+         for variant in product.Variants
+            for image in variant.Images
+               img( class="pic-"+image.id src="/public/images/"+image.id+image.extension)
