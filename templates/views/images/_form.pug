@@ -1,4 +1,6 @@
-form(action='/images' enctype="multipart/form-data" method="POST")
+.forms
+ h2.create Create New Image
+ form(action='/images', method="POST")
     label( for="variant" ) Variant: 
     select( name='variantId' ) 
         for variant in variants

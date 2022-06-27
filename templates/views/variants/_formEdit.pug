@@ -1,4 +1,6 @@
-form(action='/variants/'+variants.id, method="POST")
+.forms
+ h2.create Edit Variant
+ form(action='/variants/'+variants.id, method="POST")
     input( type="hidden" name="id" value=variants.id)
     label( for="title" ) Title: 
     input( type="text" name="title" id="title" value=variants.title) 

@@ -1,20 +1,19 @@
 extends ../../layout/base
 
-block content 
-    h1 About #{variant.title}
-     ul 
-        li 
-            label ID: #{variant.id}
-            br
-            label Title: #{variant.title}
-            br
-            label Price: #{variant.price}
-            br
-            label Product: #{product.title}
-            br
-            label Inventory: #{variant.inventory}
-            br
-            label Description: #{variant.description}
-            br
-            a(href=variant.id+'/edit') Edit
-            a(href=variant.id+'/delete') Delete 
+block content
+ .info
+    h1 #{variant.title}
+    h3 ID: #{variant.id}
+    br
+    h3 Title: #{variant.title}
+    br
+    h3 Price: #{variant.price}
+    br
+    h3 Product: #{product.title}
+    br
+    h3 Inventory: #{variant.inventory}
+    br
+    h3 Description: #{variant.description}
+    br
+    a(href=variant.id+'/edit') Edit
+    a(href=variant.id+'/delete') Delete 

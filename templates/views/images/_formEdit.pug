@@ -1,4 +1,6 @@
-form(action='/images' enctype="multipart/form-data" method="POST")
+.forms
+ h2.create Edit Image
+ form(action='/images' enctype="multipart/form-data" method="POST")
     input( type="hidden" name="id" value=image.id)
     label( for="variant" ) Variant: 
     select( name='variantId' ) 

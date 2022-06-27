@@ -1,12 +1,11 @@
 extends ../../layout/base
 
 block content 
+ .info
     h1 About Image ##{image.id}
-     ul 
-        li 
-            label ID: #{image.id}
-            br
-            label Assigned Variant: #{variant.title}
-            br
-            a(href=image.id+'/edit') Edit
-            a(href=image.id+'/delete') Delete 
+    h3 ID: #{image.id}
+    br
+    h3 Assigned Variant: #{variant.title}
+    br
+    a(href=image.id+'/edit') Edit
+    a(href=image.id+'/delete') Delete 
