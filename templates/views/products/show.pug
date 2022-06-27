@@ -1,14 +1,17 @@
 extends ../../layout/base
 
 block content 
-    h1 About #{product.name}
-     ul 
-        li 
-            label ID: #{product.id}
-            br
-            label Name: #{product.name}
-            br
-            label Price: #{product.price}
-            br
-            a(href=product.id+'/edit') Edit
-            a(href=product.id+'/delete') Delete 
+ .info
+    h1 #{product.title}
+    h3 ID: #{product.id}
+    br
+    h3 Name: #{product.title}
+    br
+    h3 Price: #{product.price}
+    br
+    h3 Description: #{product.description}
+    br
+    h3 is_published: #{product.is_published}
+    br
+    a(href=product.id+'/edit') Edit
+    a(href=product.id+'/delete') Delete 

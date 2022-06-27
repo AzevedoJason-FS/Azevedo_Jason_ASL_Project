@@ -1,10 +1,19 @@
-form(action='/products', method="POST")
+.forms
+ h2.create Create New Product
+ form(action='/products', method="POST")
     label( for="name" ) Name: 
-    input( type="text" name="name" id="name" ) 
+    input( type="text" name="title" id="title" ) 
     br
     label( for="name" ) Price: 
-    input( type="number" name="price" id="price" ) 
+    input( type="number" name="price" id="price" min="0" step=".01" ) 
+    br
+    label( for="description" ) Description: 
+    input( type="text" name="description" id="description" ) 
+    br
+    label( for="published" ) Is Published?
+    input( type="checkbox" name="is_published" id="is_published" value="true")
+    br
+    label( for="slug" ) Slug:
+    input( type="text" name="slug" id="slug" )
     br
     input( type="submit" name="submit" id="submit" )
-
-    

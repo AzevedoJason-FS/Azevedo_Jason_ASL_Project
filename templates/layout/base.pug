@@ -1,9 +1,13 @@
 html  
     head
-        title ASL Project
+        title E-Shop
+        
+        block stylesheets
+         link( rel='stylesheet', href='../../public/app.css' )
     body
         include ../partials/_header
 
-            block content
+        block content
 
-        include ../partials/_footer
+        block scripts
+         script(type='text/javascript', src='../../public/app.js')

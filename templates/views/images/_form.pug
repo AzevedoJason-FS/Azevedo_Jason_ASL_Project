@@ -1,0 +1,14 @@
+.forms
+ h2.create Create New Image
+ form(action='/images', method="POST")
+    label( for="variant" ) Variant: 
+    select( name='variantId' ) 
+        for variant in variants
+            option( value=variant.id ) #{ variant.title }
+    br
+    label( for="image") Upload Image:
+    br
+    input( type="file" name="image" id="image" )
+    input( type="submit" name="submit" id="submit" )
+
+    

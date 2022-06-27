@@ -1,0 +1,19 @@
+extends ../../layout/base
+
+block content 
+   .barHigh
+   .barHigh2
+   .barHigh3
+   .barHigh4
+   .barHigh5
+   .main-title
+    h2 Products For Sale
+   .product-cards
+         for product in products
+            .product-card
+               a.product-slug(href="/main/products/"+product.slug)
+                  h1 #{product.title}
+                  h3.product-price #{product.price}
+                  for variant in product.Variants
+                     for image in variant.Images
+                        img( class="pic-"+image.id src="/public/images/"+image.id+image.extension)

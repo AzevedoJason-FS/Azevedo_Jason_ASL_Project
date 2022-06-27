@@ -1,10 +1,21 @@
-form(action='/products/'+product.id, method="POST")
+.forms
+ h2.create Edit Product
+ form(action='/products/'+product.id, method="POST")
     input( type="hidden" name="id" value=product.id)
-    label( for="name" ) Name: 
-    input( type="text" name="name" id="name" value=product.name) 
+    label( for="title" ) Name: 
+    input( type="text" name="title" id="title" value=product.title) 
     br
     label( for="price" ) Price: 
-    input( type="number" name="price" id="price" value=product.price) 
+    input( type="number" name="price" id="price" value=product.price min="0" step=".01") 
+    br
+    label( for="description" ) Description: 
+    input( type="text" name="description" id="description" value=product.description) 
+    br
+    label( for="published" ) Is_Published: 
+    input( type="checkbox" name="is_published" id="is_published" value="true" checked="checked")
+    br
+    label( for="slug" ) Slug:
+    input( type="text" name="slug" id="slug" value=product.slug)
     br
     input( type="submit" name="submit" id="submit" )
 

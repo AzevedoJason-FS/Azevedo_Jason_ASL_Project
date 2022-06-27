@@ -1,11 +1,22 @@
 extends ../../layout/base
 
 block content 
+  .barHigh
+  .barHigh2
+  .barHigh3
+  .barHigh4
+  .barHigh5
+  .contentProducts
     h1 All Products:
     ul 
         each product in products
-            li= product.name + '|$' + product.price        
+            h2 Title: #{product.title}
+            p Price: $#{product.price}
+            p Published: #{product.is_published}
             a(href='products/'+product.id) Edit 
+            br
             a(href='products/'+product.id+'/delete') Delete
     br
     a(href='products/new') Create New Item
+
+    
